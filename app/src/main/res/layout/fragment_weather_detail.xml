@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bg_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:background="@drawable/bg_beijing">
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        tools:text="天气晴朗，适合出行"/>
+
+    <TextView
+        android:id="@+id/weedSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/status"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        tools:text="微风"/>
+
+    <TextView
+        android:id="@+id/airPressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/status"
+        android:layout_toRightOf="@id/weedSpeed"
+        android:layout_marginLeft="20dp"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        tools:text="气压怡人"/>
+
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_above="@id/weedSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        tools:text="23℃"/>
+
+</RelativeLayout>
