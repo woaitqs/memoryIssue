@@ -29,6 +29,12 @@ public class WeatherActivity extends AppCompatActivity implements WeatherManager
     WeatherManager.getInstance().addWeatcherListener(this);
   }
 
+  @Override
+  protected void onDestroy() {
+     WeatherManager.getInstance().removeWeatherListener(this);
+    super.onDestroy();
+  }
+
   private List<Weather> mockWeathers() {
 
     ArrayMap<String, String> mockUrls = new ArrayMap<>();

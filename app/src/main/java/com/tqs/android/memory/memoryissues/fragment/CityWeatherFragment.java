@@ -7,6 +7,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,6 +52,16 @@ public class CityWeatherFragment extends Fragment {
     status.setText(weather.getStatus());
     airPressure.setText("气压：" + weather.getAirPressure());
     new FetchBgTask(getResFromUrl(weather.getBackgroundUrl()), bgView).execute();
+
+    costTime();
+  }
+
+  private void costTime() {
+    long timeCost = 0;
+    for (int i = 0 ; i < 10000000; i ++) {
+      timeCost += i;
+    }
+    Log.d(CityWeatherFragment.class.getSimpleName(), "timeCost is " + timeCost);
   }
 
   private int getResFromUrl(String url) {
